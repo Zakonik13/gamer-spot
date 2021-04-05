@@ -28,6 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(publicPath));
 app.use(routes);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(require('./controllers'));
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
